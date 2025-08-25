@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoPin - Shared Landmarks</title>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <style>
+    /* Custom scrollbar for better aesthetics (optional) */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    body {
+      font-family: 'Inter', sans-serif; /* A common Tailwind-friendly font */
+    }
+    .leaflet-container {
+      cursor: crosshair;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^18.2.0/",
+    "react/": "https://esm.sh/react@^18.2.0/",
+    "react": "https://esm.sh/react@^18.2.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.0.0",
+    "leaflet": "https://esm.sh/leaflet@1.9.4",
+    "react-leaflet": "https://esm.sh/react-leaflet@4.2.1"
+  }
+}
+</script>
+</head>
+<body class="h-full bg-gray-100">
+  <div id="root" class="h-full"></div>
+  <script>
+    // Mock process.env.API_KEY for browser environment if not set by a build tool
+    // In a real deployment, this would be set during the build process or server-side
+    // For this exercise, if you want to test Gemini features, set it here or in your browser's console:
+    // window.process = { env: { API_KEY: "YOUR_GEMINI_API_KEY" } };
+    // Ensure this runs before your React app scripts if they rely on process.env at module load time.
+    // However, the app logic will check for window.process.env.API_KEY at runtime.
+  </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

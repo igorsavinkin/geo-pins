@@ -1,0 +1,16 @@
+{
+  "short_name": "GeoPin",
+  "name": "GeoPin - GeoTapa",
+  "description": "A collaborative mapping application where users can mark and share landmarks. Features user roles, landmark categorization, and expiration settings. Includes an AI-powered description suggestion feature for landmarks.",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0ea5e9",
+  "background_color": "#1e293b"
+}
